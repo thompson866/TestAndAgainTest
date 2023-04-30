@@ -15,6 +15,8 @@ public class PersonController {
 
     @GetMapping("/person")
     public String getPersonInfo(@RequestParam("number") Integer number) {
-        return personService.getPerson(number);
+        final String person;
+        person = personService.getPerson(number);
+        return person;
     }
 }
